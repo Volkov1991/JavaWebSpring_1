@@ -132,7 +132,7 @@ public class ServerRunnable implements Runnable {
                 socket.close();
                 return;
             }
-           // handler.handle((com.sun.net.httpserver.Request) request, out);
+            handler.handle(request, out);
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
