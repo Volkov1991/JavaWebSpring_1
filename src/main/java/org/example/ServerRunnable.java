@@ -1,5 +1,9 @@
 package org.example;
 
+//import org.apache.hc.core5.http.NameValuePair;
+
+//import org.apache.hc.core5.http.NameValuePair;
+
 import org.apache.hc.core5.http.NameValuePair;
 
 import java.io.*;
@@ -23,8 +27,9 @@ public class ServerRunnable implements Runnable {
 
     public ServerRunnable(Socket socket, List<String> validPaths, Server server) {
         this.socket = socket;
-        this.validPaths = validPaths;
+
         this.server = server;
+        this.validPaths = validPaths;
     }
 
     @Override
@@ -127,7 +132,7 @@ public class ServerRunnable implements Runnable {
                 socket.close();
                 return;
             }
-            handler.handle((com.sun.net.httpserver.Request) request, out);
+           // handler.handle((com.sun.net.httpserver.Request) request, out);
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
