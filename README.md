@@ -1,4 +1,4 @@
-# Задача Refactoring & MultiThreading
+# Задача 1. Refactoring & MultiThreading
 
 ## Легенда
 
